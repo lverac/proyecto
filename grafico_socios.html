@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</head>
+<body>
+    <div class="col-md-6">
+        
+    </div>
+       <div class="col-md-6" id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        
+    
+<script>
+
+
+</script>
+
+<script>
+    Highcharts.chart('container', {
+       chart: {
+           type: 'column'
+       },
+       title: {
+           text: 'Socios Anuales 2010 - 2017'
+       },
+       subtitle: {
+           text: 'Fuente: FEF'
+       },
+       xAxis: {
+           categories: [
+               '2010',
+               '2011',
+               '2012',
+               '2013',
+               '2014',
+               '2015',
+               '2016',
+               '2017',
+               
+           ],
+           crosshair: true
+       },
+       yAxis: {
+           min: 0,
+           title: {
+               text: 'Socios (K)'
+           }
+       },
+       tooltip: {
+           headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+           pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+               '<td style="padding:0"><b>{point.y:.1f} K</b></td></tr>',
+           footerFormat: '</table>',
+           shared: true,
+           useHTML: true
+       },
+       plotOptions: {
+           column: {
+               pointPadding: 0.2,
+               borderWidth: 0
+           }
+       },
+       series: [{
+           name: 'EMELEC',
+           data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5]
+   
+       }, {
+           name: 'BARCELONA',
+           data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3]
+   
+       }, {
+           name: 'LDU',
+           data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6]
+   
+       }, {
+           name: 'NACIONAL',
+           data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4]
+   
+       }]
+   });
+   
+   </script>
+</body>
+</html>
